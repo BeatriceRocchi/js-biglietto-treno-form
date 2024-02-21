@@ -1,0 +1,14 @@
+body {
+  background-color: lightgray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container_custom {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.form_container, .ticket_container {
+  background-color: white;
+  border: 1px solid black;
+}

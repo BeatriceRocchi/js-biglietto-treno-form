@@ -22,7 +22,92 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
-    
+    <div class="container_custom text-center">
+      <!-- Ticket generator section -->
+      <section id="ticket-generator">
+        <h2>Calcola il prezzo del tuo biglietto</h2>
+        <div>
+          <form class="form_container py-3 mb-5" action="#">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="m-3">
+                <label for="userNameInput" class="form-label"
+                  >Nome Cognome</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userNameInput"
+                  placeholder="Nome e cognome"
+                />
+              </div>
+              <div class="m-3">
+                <label for="userKmInput" class="form-label"
+                  >Km da percorrere</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userKmInput"
+                  placeholder="Km da percorrere"
+                />
+              </div>
+              <div class="m-3">
+                <label class="mb-2" for="userAgeSelect">Fascia d'età</label>
+                <select class="form-select" id="userAgeSelect">
+                  <option selected>Seleziona la fascia d'età</option>
+                  <option value="userMinor">Minorenne</option>
+                  <option value="userAdult">
+                    Maggiorenne con meno di 65 anni
+                  </option>
+                  <option value="userOver">Over 65</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Genera</button>
+            <button type="reset" class="btn btn-primary">Annula</button>
+          </form>
+        </div>
+      </section>
+      <!-- / Ticket generator section -->
+
+      <!-- Ticket recap section -->
+      <section id="ticket-recap">
+        <h2>Il tuo biglietto</h2>
+        <div class="ticket_container">
+          <h3>Dettaglio passeggeri</h3>
+          <div
+            class="container-fluid d-flex text-start justify-content-between"
+          >
+            <div>
+              <div>Nome passeggero</div>
+              <div>Nome input</div>
+            </div>
+
+            <table class="table w-75">
+              <thead>
+                <tr>
+                  <th scope="col">Offerta</th>
+                  <th scope="col">Carrozza</th>
+                  <th scope="col">Codice CP</th>
+                  <th scope="col">Costo biglietto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tipo biglietto input</td>
+                  <td>Tipo carrozza random</td>
+                  <td>Codice CP random</td>
+                  <td>Costo biglietto calcolo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- / Ticket recap section -->
+    </div>
+
     <!-- JS -->
     <script src="./js/script.js"></script>
   </body>
