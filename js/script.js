@@ -1,5 +1,6 @@
 //Buttons
 const btnGenerator = document.querySelector(".btn_generator");
+const btnReset = document.querySelector(".btn_reset");
 
 //Form variables
 const NameInput = document.getElementById("input-name");
@@ -17,7 +18,7 @@ let priceTicket = document.querySelector(".price_ticket");
 let cabNumber = document.querySelector(".cab_number");
 let cpCode = document.querySelector(".CP_code");
 let price;
-let typeMessage = "Biglietto standard";
+let typeMessage;
 
 btnGenerator.addEventListener("click", function (event) {
   event.preventDefault();
@@ -35,6 +36,8 @@ btnGenerator.addEventListener("click", function (event) {
   } else if (ageSelected.value == "userOver") {
     price -= price * discountOver;
     typeMessage = "Biglietto Over";
+  } else {
+    typeMessage = "Biglietto standard";
   }
 
   console.log("Prezzo scontato: ", price);
@@ -46,4 +49,8 @@ btnGenerator.addEventListener("click", function (event) {
   priceTicket.innerHTML = `${price.toFixed(2)} €`;
 
   ticketSection.classList.remove("d-none");
+});
+
+btnReset.addEventListener("click", function () {
+  ticketSection.classList.add("d-none");
 });
