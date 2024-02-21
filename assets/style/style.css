@@ -1,14 +1,73 @@
+/* General */
 body {
-  background-color: lightgray;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: teal;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: rgb(1, 97, 97);
+  font-size: 1.5rem;
 }
 
 .container_custom {
-  margin: 0 auto;
+  margin: 50px auto;
   width: 80%;
 }
 
-.form_container, .ticket_container {
+/* Ticket generator section */
+.form_container {
   background-color: white;
-  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.form_container .label_custom {
+  color: rgb(1, 97, 97);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.form_container .input_custom::placeholder {
+  color: rgb(190, 190, 190);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.form_container .select_custom {
+  font-size: 1rem;
+}
+
+.btn_generator,
+.btn_reset {
+  background-color: teal;
+  border: 1px solid teal;
+  margin: 10px;
+}
+
+.btn_generator:hover,
+.btn_reset:hover {
+  background-color: white;
+  color: teal;
+  border: 1px solid teal;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ticket recap section */
+.ticket_container {
+  background-color: white;
+}
+
+.ticket_container .user_box {
+  background-color: rgb(185, 219, 219);
+  border: 1.8px solid rgb(185, 219, 219);
+  width: 30%;
+}
+
+.ticket_container .table_custom {
+  width: 70%;
+  border: 1px solid rgb(185, 219, 219);
+  margin: 0;
 }

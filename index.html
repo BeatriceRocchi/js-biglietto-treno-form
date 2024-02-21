@@ -25,33 +25,37 @@
     <div class="container_custom text-center">
       <!-- Ticket generator section -->
       <section id="ticket-generator">
-        <h2>Calcola il prezzo del tuo biglietto</h2>
+        <h2 class="text-uppercase mb-3">Calcola il prezzo del tuo biglietto</h2>
         <div>
           <form class="form_container py-3 mb-5" action="#">
             <div class="d-flex justify-content-center align-items-center">
               <div class="m-3">
-                <label for="input-name" class="form-label">Nome Cognome</label>
+                <label for="input-name" class="form-label label_custom"
+                  >Nome Cognome</label
+                >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control input_custom"
                   id="input-name"
                   placeholder="Nome e cognome"
                 />
               </div>
               <div class="m-3">
-                <label for="input-km" class="form-label"
+                <label for="input-km" class="form-label label_custom"
                   >Km da percorrere</label
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control input_custom"
                   id="input-km"
                   placeholder="Km da percorrere"
                 />
               </div>
               <div class="m-3">
-                <label class="mb-2" for="selected-age">Fascia d'età</label>
-                <select class="form-select" id="selected-age">
+                <label class="label_custom" for="selected-age"
+                  >Fascia d'età</label
+                >
+                <select class="form-select select_custom" id="selected-age">
                   <option selected>Seleziona la fascia d'età</option>
                   <option value="userMinor">Minorenne</option>
                   <option value="userAdult">
@@ -75,18 +79,18 @@
 
       <!-- Ticket recap section -->
       <section id="ticket-recap" class="d-none">
-        <h2>Il tuo biglietto</h2>
+        <h2 class="text-uppercase mb-3">Il tuo biglietto</h2>
         <div class="ticket_container">
-          <h3>Dettaglio passeggeri</h3>
+          <h3 class="py-3">Dettagli passeggero</h3>
           <div
-            class="container-fluid d-flex text-start justify-content-between"
+            class="container-fluid d-flex text-start justify-content-between align-items-center p-3"
           >
-            <div>
-              <div>Nome passeggero</div>
-              <div class="name_ticket"></div>
+            <div class="user_box p-3">
+              <div class="text-uppercase">Nome passeggero</div>
+              <div class="name_ticket fw-bold"></div>
             </div>
 
-            <table class="table w-75">
+            <table class="table table_custom">
               <thead>
                 <tr>
                   <th scope="col">Offerta</th>
@@ -97,7 +101,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="type_ticket">Tipo biglietto input</td>
+                  <td class="type_ticket"></td>
                   <td class="cab_number"></td>
                   <td class="CP_code"></td>
                   <td class="price_ticket"></td>
