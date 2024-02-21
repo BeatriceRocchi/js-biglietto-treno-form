@@ -30,30 +30,28 @@
           <form class="form_container py-3 mb-5" action="#">
             <div class="d-flex justify-content-center align-items-center">
               <div class="m-3">
-                <label for="userNameInput" class="form-label"
-                  >Nome Cognome</label
-                >
+                <label for="input-name" class="form-label">Nome Cognome</label>
                 <input
                   type="text"
-                  class="form-control input-name"
-                  id="userNameInput"
+                  class="form-control"
+                  id="input-name"
                   placeholder="Nome e cognome"
                 />
               </div>
               <div class="m-3">
-                <label for="userKmInput" class="form-label"
+                <label for="input-km" class="form-label"
                   >Km da percorrere</label
                 >
                 <input
                   type="text"
-                  class="form-control input-km"
-                  id="userKmInput"
+                  class="form-control"
+                  id="input-km"
                   placeholder="Km da percorrere"
                 />
               </div>
               <div class="m-3">
-                <label class="mb-2" for="userAgeSelect">Fascia d'età</label>
-                <select class="form-select selected-age" id="userAgeSelect">
+                <label class="mb-2" for="selected-age">Fascia d'età</label>
+                <select class="form-select" id="selected-age">
                   <option selected>Seleziona la fascia d'età</option>
                   <option value="userMinor">Minorenne</option>
                   <option value="userAdult">
@@ -74,7 +72,7 @@
       <!-- / Ticket generator section -->
 
       <!-- Ticket recap section -->
-      <section id="ticket-recap">
+      <section id="ticket-recap" class="d-none">
         <h2>Il tuo biglietto</h2>
         <div class="ticket_container">
           <h3>Dettaglio passeggeri</h3>
@@ -98,11 +96,9 @@
               <tbody>
                 <tr>
                   <td class="type_ticket">Tipo biglietto input</td>
-                  <td>Tipo carrozza random</td>
-                  <!-- TODO: da fare -->
-                  <td>Codice CP random</td>
-                  <!-- TODO: da fare -->
-                  <td class="price_ticket">&euro;</td>
+                  <td class="cab_number"></td>
+                  <td class="CP_code"></td>
+                  <td class="price_ticket"></td>
                 </tr>
               </tbody>
             </table>
