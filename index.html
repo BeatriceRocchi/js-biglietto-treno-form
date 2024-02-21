@@ -35,7 +35,7 @@
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control input-name"
                   id="userNameInput"
                   placeholder="Nome e cognome"
                 />
@@ -46,14 +46,14 @@
                 >
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control input-km"
                   id="userKmInput"
                   placeholder="Km da percorrere"
                 />
               </div>
               <div class="m-3">
                 <label class="mb-2" for="userAgeSelect">Fascia d'età</label>
-                <select class="form-select" id="userAgeSelect">
+                <select class="form-select selected-age" id="userAgeSelect">
                   <option selected>Seleziona la fascia d'età</option>
                   <option value="userMinor">Minorenne</option>
                   <option value="userAdult">
@@ -64,7 +64,9 @@
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Genera</button>
+            <button type="submit" class="btn btn_generator btn-primary">
+              Genera
+            </button>
             <button type="reset" class="btn btn-primary">Annula</button>
           </form>
         </div>
@@ -81,7 +83,7 @@
           >
             <div>
               <div>Nome passeggero</div>
-              <div>Nome input</div>
+              <div class="name_ticket"></div>
             </div>
 
             <table class="table w-75">
@@ -95,10 +97,12 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Tipo biglietto input</td>
+                  <td class="type_ticket">Tipo biglietto input</td>
                   <td>Tipo carrozza random</td>
+                  <!-- TODO: da fare -->
                   <td>Codice CP random</td>
-                  <td>Costo biglietto calcolo</td>
+                  <!-- TODO: da fare -->
+                  <td class="price_ticket">&euro;</td>
                 </tr>
               </tbody>
             </table>
