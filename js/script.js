@@ -23,32 +23,40 @@ let typeMessage;
 btnGenerator.addEventListener("click", function (event) {
   event.preventDefault();
 
-  console.log("Nome utente: ", NameInput.value);
-  console.log("Km da percorrere: ", kmInput.value);
-  console.log("Fascia di età: ", ageSelected.value);
-
-  price = parseInt(kmInput.value) * priceKm;
-  console.log("Prezzo intero: ", price);
-
-  if (ageSelected.value === "userMinor") {
-    price -= price * discountMinors;
-    typeMessage = "Biglietto Young";
-  } else if (ageSelected.value == "userOver") {
-    price -= price * discountOver;
-    typeMessage = "Biglietto Over";
+  if (
+    NameInput.value === "" ||
+    kmInput.value === "" ||
+    ageSelected.value === "Seleziona la fascia d'età"
+  ) {
+    alert("Per proseguire, è necessario compilare tutti i campi!");
   } else {
-    typeMessage = "Biglietto standard";
+    console.log("Nome utente: ", NameInput.value);
+    console.log("Km da percorrere: ", kmInput.value);
+    console.log("Fascia di età: ", ageSelected.value);
+
+    price = parseInt(kmInput.value) * priceKm;
+    console.log("Prezzo intero: ", price);
+
+    if (ageSelected.value === "userMinor") {
+      price -= price * discountMinors;
+      typeMessage = "Biglietto Young";
+    } else if (ageSelected.value == "userOver") {
+      price -= price * discountOver;
+      typeMessage = "Biglietto Over";
+    } else {
+      typeMessage = "Biglietto standard";
+    }
+
+    console.log("Prezzo scontato: ", price);
+
+    nameTicket.innerHTML = NameInput.value;
+    typeTicket.innerHTML = typeMessage;
+    cabNumber.innerHTML = Math.floor(Math.random() * 20) + 1;
+    cpCode.innerHTML = Math.floor(Math.random() * 90000) + 10000;
+    priceTicket.innerHTML = `${price.toFixed(2)} €`;
+
+    ticketSection.classList.remove("d-none");
   }
-
-  console.log("Prezzo scontato: ", price);
-
-  nameTicket.innerHTML = NameInput.value;
-  typeTicket.innerHTML = typeMessage;
-  cabNumber.innerHTML = Math.floor(Math.random() * 20) + 1;
-  cpCode.innerHTML = Math.floor(Math.random() * 90000) + 10000;
-  priceTicket.innerHTML = `${price.toFixed(2)} €`;
-
-  ticketSection.classList.remove("d-none");
 });
 
 btnReset.addEventListener("click", function () {
