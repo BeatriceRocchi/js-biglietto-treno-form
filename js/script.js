@@ -28,7 +28,11 @@ btnGenerator.addEventListener("click", function (event) {
     kmInput.value === "" ||
     ageSelected.value === "Seleziona la fascia d'età"
   ) {
-    alert("Per proseguire, è necessario compilare tutti i campi!");
+    alert("Attenzione: per proseguire, è necessario compilare tutti i campi!");
+  } else if (isNaN(kmInput.value) || kmInput.value <= 0) {
+    alert(
+      "Attenzione: per proseguire, è necessario inserire un numero valido all'interno del campo 'km da percorrere'"
+    );
   } else {
     console.log("Nome utente: ", NameInput.value);
     console.log("Km da percorrere: ", kmInput.value);
